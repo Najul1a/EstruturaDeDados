@@ -76,5 +76,74 @@ internal class Program
 
 
 
+        Console.WriteLine();
+
+        //Trabalhando com FILA//
+        //Criar um fila (Queue)
+        Queue<string> filaBranco = new Queue<string>();
+
+        //Adicionar elemeto na Fila
+        filaBranco.Enqueue("Felipe");
+        filaBranco.Enqueue("Vanessa");
+        filaBranco.Enqueue("Manuela");
+        filaBranco.Enqueue("Anderson");
+
+        foreach (var pessoa in filaBranco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        filaBranco.Dequeue();
+
+        Console.WriteLine();
+        Console.WriteLine("==========================================");
+        Console.WriteLine();
+        foreach (var pessoa in filaBranco)
+        {
+
+            Console.WriteLine(pessoa);
+        }
+        bool achou = filaBranco.Contains("Manuela");
+
+        if (achou == true)
+        {
+            Console.WriteLine("A pessoa estã na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não esta na fila");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("===================================================");
+        Console.WriteLine();
+        //Trabalhando com pilha 
+        //Criando uma pilha
+        Stack<string> livros = new Stack<string>();
+
+        //Adicionar elementos em uma pilha 
+        livros.Push("Chapeuzinho vermelho");
+        livros.Push("Branca de Neve e os Sete Anões");
+        livros.Push("Princesa e o Sapo");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();
+        Console.WriteLine("================================================");
+        Console.WriteLine();
+
+        //Removendo primeiro elemento da pilha
+        livros.Pop();
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("====================================================");
+        Console.WriteLine();
+
     }
 }
