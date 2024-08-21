@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -13,6 +15,7 @@
         frutas.Add("Uva");
 
         //Imprimir os itens da Lista
+        Console.WriteLine("Minha Lista de Frutas: ");
         frutas.ForEach(Console.WriteLine);
 
         Console.WriteLine(); //pula linha em Branco
@@ -26,10 +29,8 @@
         Console.WriteLine();
 
         Console.WriteLine("Minha Lista de Frutas: ");
-        foreach (string frut in frutas)
-        {
-            Console.WriteLine(frut);
-        }
+        frutas.ForEach(Console.WriteLine);
+
         /* Alterar um elemento no índice especifico */
         frutas[4] = "Pera";
 
@@ -56,5 +57,24 @@
         }
         //Apagar todos os elemtos da lista
         frutas.Clear();
+
+        Console.WriteLine();
+        //Trabalhando com Dicionario de dados
+
+        //Criando um dicionario de dados 
+        Dictionary<int, string> carros = new Dictionary<int, string>();
+        //forma os dados a um dicionario
+        carros.Add(5, "Corsa");
+        carros.Add(10, "Fusca");
+        carros.Add(2, "Foed Ka");
+
+        //imprimir um dicionario de dados
+        foreach (var carro in carros)
+        {
+            Console.WriteLine($"{carro.Key} - {carro.Value}");
+        }
+
+
+
     }
 }
